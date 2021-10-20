@@ -1,37 +1,23 @@
 # Frustum-PointPillars: A Multi-Stage Approach for 3D Object Detection using RGB Camera and LiDAR
----
+
+
 Authors: Anshul Paigwar, David Sierra-Gonzalez, Ozgur Erkent, Christian Laugier
----
+
 
 ## Introduction
 This repository is code release for our GndNet paper published in IEEE International Conference of Computer Vision, ICCV'2021, Workshop on Autonomous Vehicle Vision. [Link](https://openaccess.thecvf.com/content/ICCV2021W/AVVision/papers/Paigwar_Frustum-PointPillars_A_Multi-Stage_Approach_for_3D_Object_Detection_Using_RGB_ICCVW_2021_paper.pdf)
 
-We would like to thank authors of PointPillars and SECOND detector. This repository is forked from nutonomy [PointPillars](https://github.com/nutonomy/second.pytorch) code base.
-
 ## Abstract
----
 Accurate 3D object detection is a key part of the perception module for autonomous vehicles. A better understanding of the objects in 3D facilitates better decision-making and path planning. RGB Cameras and LiDAR are the most commonly used sensors in autonomous vehicles for environment perception. Many approaches have shown promising results for 2D detection with RGB Images, but efficiently localizing small objects like pedestrians in the 3D point cloud of large scenes has remained a challenging area of research. We propose a novel method, Frustum-PointPillars, for 3D object detection using LiDAR data. Instead of solely relying on point cloud features, we leverage the mature field of 2D object detection to reduce the search space in the 3D space. Then, we use the Pillar Feature Encoding network for object localization in the reduced point cloud. We also propose a novel approach for masking point clouds to further improve the localization of objects. We train our network on the KITTI dataset and perform experiments to show the effectiveness of our network. On the KITTI test set our method outperforms other multi-sensor SOTA approaches for 3D pedestrian localization (Bird’s Eye View) while achieving a significantly faster runtime of 14 Hz.  
-
-<!-- This repo demonstrates how to reproduce the results from
-[_PointPillars: Fast Encoders for Object Detection from Point Clouds_](https://arxiv.org/abs/1812.05784) (to be published at CVPR 2019) on the
-[KITTI dataset](http://www.cvlibs.net/datasets/kitti/) by making the minimum required changes from the preexisting
-open source codebase [SECOND](https://github.com/traveller59/second.pytorch). 
-
-This is not an official nuTonomy codebase, but it can be used to match the published PointPillars results.
-
-**WARNING: This code is not being actively maintained. This code can be used to reproduce the results in the first version of the paper, https://arxiv.org/abs/1812.05784v1. For an actively maintained repository that can also reproduce PointPillars results on nuScenes, we recommend using [SECOND](https://github.com/traveller59/second.pytorch). We are not the owners of the repository, but we have worked with the author and endorse his code.**-->
-
-<!-- ![Example Results](https://raw.githubusercontent.com/nutonomy/second.pytorch/master/images/pointpillars_kitti_results.png) -->
 
 
 ## Getting Started
 
-This is a fork of [SECOND for KITTI object detection](https://github.com/traveller59/second.pytorch) and the relevant
-subset of the original README is reproduced here.
+We would like to thank authors of PointPillars and SECOND detector. This repository is forked from nutonomy [PointPillars](https://github.com/nutonomy/second.pytorch) and [SECOND](https://github.com/traveller59/second.pytorch) for KITTI object detection.
 
 ### Code Support
 
-ONLY supports python 3.6+, pytorch 0.4.1+. Code has only been tested on Ubuntu 16.04/18.04.
+ONLY supports python 3.6+, pytorch 1.4 +. Code has only been tested on Ubuntu 18.04.
 
 ### Install
 
