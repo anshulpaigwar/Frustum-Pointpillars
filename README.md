@@ -1,8 +1,9 @@
 # Frustum-PointPillars: A Multi-Stage Approach for 3D Object Detection using RGB Camera and LiDAR
 
 
-Authors: Anshul Paigwar, David Sierra-Gonzalez, Ozgur Erkent, Christian Laugier
+**Authors: Anshul Paigwar, David Sierra-Gonzalez, Ozgur Erkent, Christian Laugier**
 
+<img src="https://github.com/anshulpaigwar/Frustum-Pointpillars/blob/main/doc/teaser.png" alt="drawing" width="400"/><img src="https://github.com/anshulpaigwar/Frustum-Pointpillars/blob/main/doc/mask.png" alt="drawing" width="400"/>
 
 ## Introduction
 This repository is code release for our GndNet paper published in IEEE International Conference of Computer Vision, ICCV'2021, Workshop on Autonomous Vehicle Vision. [Link](https://openaccess.thecvf.com/content/ICCV2021W/AVVision/papers/Paigwar_Frustum-PointPillars_A_Multi-Stage_Approach_for_3D_Object_Detection_Using_RGB_ICCVW_2021_paper.pdf)
@@ -10,6 +11,7 @@ This repository is code release for our GndNet paper published in IEEE Internati
 ## Abstract
 Accurate 3D object detection is a key part of the perception module for autonomous vehicles. A better understanding of the objects in 3D facilitates better decision-making and path planning. RGB Cameras and LiDAR are the most commonly used sensors in autonomous vehicles for environment perception. Many approaches have shown promising results for 2D detection with RGB Images, but efficiently localizing small objects like pedestrians in the 3D point cloud of large scenes has remained a challenging area of research. We propose a novel method, Frustum-PointPillars, for 3D object detection using LiDAR data. Instead of solely relying on point cloud features, we leverage the mature field of 2D object detection to reduce the search space in the 3D space. Then, we use the Pillar Feature Encoding network for object localization in the reduced point cloud. We also propose a novel approach for masking point clouds to further improve the localization of objects. We train our network on the KITTI dataset and perform experiments to show the effectiveness of our network. On the KITTI test set our method outperforms other multi-sensor SOTA approaches for 3D pedestrian localization (Bird’s Eye View) while achieving a significantly faster runtime of 14 Hz.  
 
+<img src="https://github.com/anshulpaigwar/Frustum-Pointpillars/blob/main/doc/fpp-architecture.png" alt="drawing" width="900"/>
 
 ## Getting Started
 
