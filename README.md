@@ -26,12 +26,12 @@ ONLY supports python 3.6+, pytorch 1.4 +. Code has only been tested on Ubuntu 18
 #### 1. Clone code
 
 ```bash
-git clone https://github.com/nutonomy/second.pytorch.git
+git clone https://github.com/anshulpaigwar/Frustum-Pointpillars.git
 ```
 
 #### 2. Install Python packages
 
-It is recommend to use the Anaconda package manager.
+<!-- It is recommend to use the Anaconda package manager.
 
 First, use Anaconda to configure as many packages as possible.
 ```bash
@@ -40,12 +40,12 @@ source activate pointpillars
 conda install shapely pybind11 protobuf scikit-image numba pillow
 conda install pytorch torchvision -c pytorch
 conda install google-sparsehash -c bioconda
-```
+``` -->
 
-Then use pip for the packages missing from Anaconda.
+You can use pip or Anaconda package manager to install following packages.
 ```bash
 pip install --upgrade pip
-pip install fire tensorboardX
+pip install fire tensorboardX shapely pybind11 protobuf scikit-image numba pillow sparsehash
 ```
 
 Finally, install SparseConvNet. This is not required for PointPillars, but the general SECOND code base expects this
@@ -64,7 +64,7 @@ sudo apt-get install libboost-all-dev
 ```
 
 
-#### 3. Setup cuda for numba
+<!-- #### 3. Setup cuda for numba
 
 You need to add following environment variables for numba to ~/.bashrc:
 
@@ -72,11 +72,11 @@ You need to add following environment variables for numba to ~/.bashrc:
 export NUMBAPRO_CUDA_DRIVER=/usr/lib/x86_64-linux-gnu/libcuda.so
 export NUMBAPRO_NVVM=/usr/local/cuda/nvvm/lib64/libnvvm.so
 export NUMBAPRO_LIBDEVICE=/usr/local/cuda/nvvm/libdevice
-```
+``` -->
 
 #### 4. PYTHONPATH
 
-Add second.pytorch/ to your PYTHONPATH.
+Add Frustum-PointPillars/ to your PYTHONPATH.
 
 ### Prepare dataset
 
