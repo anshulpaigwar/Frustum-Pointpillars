@@ -3,7 +3,7 @@
 
 **Authors: Anshul Paigwar, David Sierra-Gonzalez, Ozgur Erkent, Christian Laugier**
 
-<img src="https://github.com/anshulpaigwar/Frustum-Pointpillars/blob/main/doc/teaser.png" alt="drawing" width="400"/><img src="https://github.com/anshulpaigwar/Frustum-Pointpillars/blob/main/doc/mask.png" alt="drawing" width="400"/>
+<img src="https://github.com/anshulpaigwar/Frustum-Pointpillars/blob/main/doc/teaser.png" alt="drawing" width="400"/><img src="https://github.com/anshulpaigwar/Frustum-Pointpillars/blob/main/doc/mask.png" alt="drawing" width="300"/>
 
 ## Introduction
 This repository is code release for our GndNet paper published in IEEE International Conference of Computer Vision, ICCV'2021, Workshop on Autonomous Vehicle Vision. [Link](https://openaccess.thecvf.com/content/ICCV2021W/AVVision/papers/Paigwar_Frustum-PointPillars_A_Multi-Stage_Approach_for_3D_Object_Detection_Using_RGB_ICCVW_2021_paper.pdf)
@@ -11,7 +11,7 @@ This repository is code release for our GndNet paper published in IEEE Internati
 ## Abstract
 Accurate 3D object detection is a key part of the perception module for autonomous vehicles. A better understanding of the objects in 3D facilitates better decision-making and path planning. RGB Cameras and LiDAR are the most commonly used sensors in autonomous vehicles for environment perception. Many approaches have shown promising results for 2D detection with RGB Images, but efficiently localizing small objects like pedestrians in the 3D point cloud of large scenes has remained a challenging area of research. We propose a novel method, Frustum-PointPillars, for 3D object detection using LiDAR data. Instead of solely relying on point cloud features, we leverage the mature field of 2D object detection to reduce the search space in the 3D space. Then, we use the Pillar Feature Encoding network for object localization in the reduced point cloud. We also propose a novel approach for masking point clouds to further improve the localization of objects. We train our network on the KITTI dataset and perform experiments to show the effectiveness of our network. On the KITTI test set our method outperforms other multi-sensor SOTA approaches for 3D pedestrian localization (Bird’s Eye View) while achieving a significantly faster runtime of 14 Hz.  
 
-<img src="https://github.com/anshulpaigwar/Frustum-Pointpillars/blob/main/doc/fpp-architecture.png" alt="drawing" width="900"/>
+<img src="https://github.com/anshulpaigwar/Frustum-Pointpillars/blob/main/doc/fpp-architecture.png" alt="drawing" width="800"/>
 
 ## Getting Started
 
@@ -166,3 +166,35 @@ python pytorch/train.py evaluate --config_path= configs/pointpillars/car/xyres_1
 
 * Detection result will saved in model_dir/eval_results/step_xxx.
 * By default, results are stored as a result.pkl file. To save as official KITTI label format use --pickle_result=False.
+
+## Results
+<img src="https://github.com/anshulpaigwar/Frustum-Pointpillars/blob/main/doc/car_det_results.png" alt="drawing" width="800"/>
+<img src="https://github.com/anshulpaigwar/Frustum-Pointpillars/blob/main/doc/ped_det_results.png" alt="drawing" width="800"/>
+
+ICCV workshop presentation: https://www.youtube.com/watch?v=0z7OPPRsqTk
+
+
+## Citation
+
+If you find this project useful in your research, please star this GitHub repository and consider citing our work:
+```
+@INPROCEEDINGS{9607424,
+  author={Paigwar, Anshul and Sierra-Gonzalez, David and Erkent, Özgür and Laugier, Christian},
+  booktitle={2021 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)}, 
+  title={Frustum-PointPillars: A Multi-Stage Approach for 3D Object Detection using RGB Camera and LiDAR}, 
+  year={2021},
+  pages={2926-2933},
+  doi={10.1109/ICCVW54120.2021.00327}}
+}
+```
+
+## Contribution
+
+We welcome you for contributing to this repo, and feel free to contact us for any potential bugs and issues.
+
+
+## References
+
+[1] Qi, Charles R., et al. "Pointnet: Deep learning on point sets for 3d classification and segmentation." Proceedings of the IEEE conference on computer vision and pattern recognition. 2017.
+
+[2] Lang, A. H., Vora, S., Caesar, H., Zhou, L., Yang, J., & Beijbom, O. (2019). Pointpillars: Fast encoders for object detection from point clouds. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 12697-12705).
